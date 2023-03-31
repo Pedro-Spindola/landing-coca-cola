@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right, #ffbaba, #fecbd8, #f9ddee, #f8effb, #ffffff);
+}
+.center
+{
+    display: flex;
+    max-width: 1200px;
+    margin:auto;
+    /*border: 2px solid greenyellow;*/
+
+}
+.menu
+{
+    margin: 10px auto;
+}
+.menu > .center
+{
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+.logo
+{
+    width: 40%;
+    filter: invert(1);
+}
+.logo img
+{
+    height: 50px;
+}
+.navegation
+{   
+    display: flex;
+    width: 50%;
+}
+.navegation ul
+{   
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+}
+.navegation li 
+{
+    list-style: none;
+    margin: auto;
+}
+.navegation a
+{
+    text-decoration: none;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 15px;
+}
+.icon_menu
+{
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+.icon_menu i
+{
+    display: none;
+    scale: 1;
+}
+.menu_mobile
+{
+    border: 2px solid blue;
+    width: 100%;
+}
+   
+.page > .center
+{
+    height: 700px;
+    align-items: center;
+}
+.text_page
+{
+    width: 40%;
+    align-self: flex-end;
+    margin-bottom: 100px;
+}
+.coca_page
+{
+    width: 60%;
+    align-self: flex-end;
+    padding-left: 200px;
+}
+.coca_page img
+{
+    height: 500px;
+}
+.text_page h1
+{
+    font-weight: 700;
+    font-size: 60px;
+    margin: 20px auto;
+}
+.text_page h2
+{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: justify;
+}
+.btn
+{
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    margin-left: 80px;
+}
+button 
+{
+    border: none;
+    color: #fff;
+    background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(254, 0, 26));
+   /* background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(255, 175, 175));*/
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+   
+button:hover 
+{
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+.rod > .center
+{
+    justify-content: space-between;
+    text-align: center;
+}
+.mideas
+{   
+    width: 200px;
+}
+.mideas i
+{
+    width: 37px;
+    height: 37px;
+    background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(254, 0, 26));
+    border-radius: 100%;
+    margin: 10px;
+    padding: 8px;
+    font-size: 20px;
+    transition: 1s;
+
+}
+.mideas i:hover
+{
+    background-image: linear-gradient(30deg, rgb(254, 0, 26), rgb(255, 175, 175));
+    transform: translateY(-10px);
+    transition: 1s;
+    
+}
+.switch
+{
+    --primary-light: rgb(255, 0, 25);
+    --primary: rgb(255, 175, 175);
+    --primary-dark: #fe001a;
+    --white: #ffffff;
+    --greyLight-1: #000000;
+    --greyLight-2: #00000067;
+    --greyDark: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+.switch input 
+{
+    display: none;
+}
+  
+.switch_
+{
+    width: 6rem;
+    scale: 0.45;
+   /* You can change 
+    the size here !*/
+}
+  
+.switch_ label 
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+    box-shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2), -0.2rem -0.2rem 0.5rem var(--white);
+    background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(254, 0, 26));
+    position: relative;
+    cursor: pointer;
+    border-radius: 1.6rem;
+}
+  
+.switch_ label::after
+{
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 50%;
+    background: var(--greyDark);
+    transition: all 0.4s ease;
+}
+  
+.switch_ label::before
+{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(330deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+  
+  .switch input:checked ~ label::before
+{
+    opacity: 1;
+}
+  
+  .switch input:checked ~ label::after 
+{
+    left: 57%;
+    background: var(--greyLight-1);
+}
+@keyframes pulse512 {
+    0% {
+     box-shadow: 0 0 0 0 #fe00196f;
+    }
+   
+    70% {
+     box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+   
+    100% {
+     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+   }
