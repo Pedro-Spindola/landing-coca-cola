@@ -4,19 +4,31 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html
+{
+    height: 100%;
+    width: 100%;
+}
 body
 {
     overflow-y: hidden;
     overflow-x: hidden;
-    background-image: linear-gradient(to right, #ffbaba, #fecbd8, #f9ddee, #f8effb, #ffffff);
+    /*background-image: linear-gradient(to right, #ffbaba, #fecbd8, #f9ddee, #f8effb, #ffffff);*/
+    background-image: linear-gradient(to right top, #ff423d, #ff635c, #ff7f7a, #ff9996, #ff9996, #ff9996, #ff9996, #ff7f7a, #ff635c, #ff423d);
+}
+body.dark
+{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: linear-gradient(to right top, #000000, #000000, #321019, #601125, #900a2b, #c0002a, #c0002a, #c0002a, #c0002a, #900a2b, #601125, #321019, #000000, #000000);
 }
 .center
 {
     display: flex;
     max-width: 1200px;
     margin:auto;
+    padding: 0 5px;
     /*border: 2px solid greenyellow;*/
-
 }
 .menu
 {
@@ -32,6 +44,11 @@ body
 {
     width: 40%;
     filter: invert(1);
+}
+.logo.dark
+{
+    width: 40%;
+    filter: none;
 }
 .logo img
 {
@@ -80,24 +97,24 @@ body
    
 .page > .center
 {
-    height: 700px;
+    height: 500px;
     align-items: center;
 }
 .text_page
 {
-    width: 40%;
+    width: 50%;
     align-self: flex-end;
     margin-bottom: 100px;
 }
 .coca_page
 {
-    width: 60%;
+    width: 50%;
     align-self: flex-end;
     padding-left: 200px;
 }
 .coca_page img
 {
-    height: 500px;
+    height: 400px;
 }
 .text_page h1
 {
@@ -118,27 +135,32 @@ body
     margin: 40px auto;
     margin-left: 80px;
 }
-button 
+button.btn_central
 {
     border: none;
     color: #fff;
-    background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(254, 0, 26));
-   /* background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(255, 175, 175));*/
+    background-image: linear-gradient(30deg, rgb(0, 0, 0), #fe001a);
+   /*background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(255, 175, 175));*/
     border-radius: 20px;
     background-size: 100% auto;
     font-family: inherit;
     font-size: 17px;
-    padding: 0.6em 1.5em;
+    padding: 10px 80px;
+    cursor: pointer;
 }
    
-button:hover 
+button.btn_central:hover 
 {
     background-position: right center;
     background-size: 200% auto;
     -webkit-animation: pulse 2s infinite;
     animation: pulse512 1.5s infinite;
 }
-
+button.btn_central.dark
+{
+    background-image: linear-gradient(30deg, rgb(254, 0, 26), rgb(255, 175, 175));
+}
+   
 .rod > .center
 {
     justify-content: space-between;
@@ -158,6 +180,7 @@ button:hover
     padding: 8px;
     font-size: 20px;
     transition: 1s;
+    cursor: pointer;
 
 }
 .mideas i:hover
@@ -166,6 +189,15 @@ button:hover
     transform: translateY(-10px);
     transition: 1s;
     
+}
+.mideas i.dark
+{
+    background-image: linear-gradient(30deg, rgb(254, 0, 26), rgb(255, 175, 175));
+}
+.mideas i.dark:hover
+{
+    background-image: linear-gradient(30deg, rgb(0, 0, 0), rgb(254, 0, 26));
+
 }
 .switch
 {
@@ -238,6 +270,12 @@ button:hover
     left: 57%;
     background: var(--greyLight-1);
 }
+.navegation a.dark,
+.text_page.dark
+{
+    color: #ffffff;
+}
+
 @keyframes pulse512 {
     0% {
      box-shadow: 0 0 0 0 #fe00196f;
