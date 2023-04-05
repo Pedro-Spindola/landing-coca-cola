@@ -75,8 +75,12 @@ body.dark
 {
     text-decoration: none;
     color: #000000;
-    font-weight: bolder;
+    font-weight: line;
     font-size: 15px;
+}
+.navegation a:hover
+{
+    font-weight: bold;
 }
 .icon_menu
 {
@@ -115,6 +119,12 @@ body.dark
 .coca_page img
 {
     height: 400px;
+    transition: 2s;
+}
+.coca_page img:hover
+{
+    transition: 5s;
+    height: 450px;
 }
 .text_page h1
 {
