@@ -11,6 +11,8 @@ html
 }
 body
 {
+    width: 100vw;
+    height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
     /*background-image: linear-gradient(to right, #ffbaba, #fecbd8, #f9ddee, #f8effb, #ffffff);*/
@@ -25,18 +27,19 @@ body.dark
 .center
 {
     display: flex;
-    max-width: 1200px;
+    max-width: 1440px;
     margin:auto;
     padding: 0 5px;
     /*border: 2px solid greenyellow;*/
 }
 .menu
 {
-    margin: 10px auto;
+    height: 100px;
+    padding: 10px 0;
 }
 .menu > .center
 {
-    height: 60px;
+    height: 80px;
     align-items: center;
     justify-content: center;
 }
@@ -52,24 +55,25 @@ body.dark
 }
 .logo img
 {
-    height: 50px;
+    height: 60px;
 }
 .navegation
 {   
     display: flex;
-    width: 50%;
+    width: 80%;
 }
 .navegation ul
 {   
     display: flex;
     width: 100%;
     align-items: center;
-
 }
 .navegation li 
 {
     list-style: none;
     margin: auto;
+    width: 180px;
+    text-align: center;
 }
 .navegation a
 {
@@ -98,23 +102,27 @@ body.dark
     border: 2px solid blue;
     width: 100%;
 }
-   
+.page{
+    display: flex;
+    height: calc(100vh - 200px);
+}
 .page > .center
 {
-    height: 500px;
+    display: flex;
+    align-content: center;
     align-items: center;
+    padding: 50px;
 }
 .text_page
 {
     width: 50%;
-    align-self: flex-end;
-    margin-bottom: 100px;
 }
 .coca_page
 {
+    display: flex;
+    align-content: center;
+    justify-content: center;
     width: 50%;
-    align-self: flex-end;
-    padding-left: 200px;
 }
 .coca_page img
 {
@@ -123,8 +131,8 @@ body.dark
 }
 .coca_page img:hover
 {
-    transition: 5s;
-    height: 450px;
+    transition: 1s;
+    transform: scale(1.2);
 }
 .text_page h1
 {
@@ -143,7 +151,6 @@ body.dark
     display: flex;
     align-items: center;
     margin: 40px auto;
-    margin-left: 80px;
 }
 button.btn_central
 {
@@ -170,11 +177,15 @@ button.btn_central.dark
 {
     background-image: linear-gradient(30deg, rgb(254, 0, 26), rgb(255, 175, 175));
 }
-   
+.rod{
+    height: 100px;
+}
 .rod > .center
 {
+    height: 100%;
     justify-content: space-between;
     text-align: center;
+    align-items: center;
 }
 .mideas
 {   
